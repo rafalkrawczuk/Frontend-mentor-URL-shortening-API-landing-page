@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [LINK](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G/hub)
 - Live Site URL: [LINK](https://rafalkrawczuk.github.io/Frontend-mentor-URL-shortening-API-landing-page/)
 
 ## My process
