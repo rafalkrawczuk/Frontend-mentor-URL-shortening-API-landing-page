@@ -1,0 +1,112 @@
+@media only screen and (max-width: 768px) {
+  .nav {
+    font-size: 1.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__container,
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__container {
+      background-color: var(--primary-dark-violet);
+      border-radius: 8px;
+      padding: 0 3rem;
+      margin-top: 2rem;
+      top: -100%;
+      width: calc(100% - 4.8rem);
+      position: fixed;
+      transition: 0.3s;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 3.5rem 0;
+      gap: 3rem;
+      border-bottom: 2px solid rgba(158, 154, 167, 0.2);
+    }
+
+    &__btns {
+      padding: 3.5rem 0;
+      gap: 3rem;
+      width: 100%;
+      text-align: center;
+      :nth-child(1) {
+        color: var(--white-color);
+      }
+
+      :last-child {
+        width: 100%;
+      }
+    }
+
+    &__link {
+      color: var(--white-color);
+    }
+
+    &__toggle,
+    &__close {
+      width: 5rem;
+      // position: absolute;
+      // top: 5rem;
+      // right: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@include for-landscape {
+  .nav {
+    max-width: 110rem;
+    display: flex;
+    margin: 0 auto;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex: 2 0 auto;
+      margin-left: 5.2rem;
+    }
+
+    &__logo {
+    }
+
+    &__list {
+      display: flex;
+      gap: 3.6rem;
+    }
+
+    &__item {
+    }
+
+    &__link {
+      &:hover {
+        color: #000;
+      }
+    }
+
+    &__btns {
+      :nth-child(1) {
+        margin-right: 4.2rem;
+      }
+    }
+
+    &__toggle,
+    &__close {
+      display: none;
+    }
+  }
+}
+
+.show-menu {
+  top: calc(0% + var(--header-height));
+}

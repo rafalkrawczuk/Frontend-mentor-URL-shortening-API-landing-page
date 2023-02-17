@@ -1,0 +1,90 @@
+.statistics {
+  &__text {
+    text-align: center;
+
+    @include for-tablet {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include for-landscape {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  //cards
+  &__cards-container {
+    margin-top: 10rem;
+    position: relative;
+    @include for-desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      margin-top: 14rem;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 4rem 4rem;
+    background-color: var(--white-color);
+    margin-bottom: 10rem;
+    position: relative;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include for-desktop {
+      align-items: flex-start;
+      text-align: left;
+
+      &:nth-child(1) {
+        transform: translateY(-5rem);
+      }
+      &:nth-child(3) {
+        transform: translateY(5rem);
+      }
+    }
+  }
+  &__card-icon {
+    padding: 1rem;
+    background-color: var(--primary-dark-violet);
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: -4rem;
+
+    img {
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__card-title {
+    margin-bottom: 1.5rem;
+  }
+  &__card-text {
+  }
+
+  &__line {
+    width: 0.8rem;
+    height: 75rem;
+    background-color: var(--primary-cyan);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @include for-desktop {
+      width: 70rem;
+      height: 0.8rem;
+      top: 28%;
+    }
+  }
+}

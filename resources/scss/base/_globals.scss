@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import "./mixins.scss";
+
+// ========== RESET STYLES ==========
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px
+  scroll-behavior: smooth;
+
+  @include for-tablet {
+    font-size: 56.25%;
+  }
+  @include for-phone {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--grayish-violet);
+  background-color: #f0f1f6;
+  line-height: 1.6;
+  @include for-phone {
+    font-size: 1.8rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grayish-violet);
+}
+
+button {
+  border: none;
+}
+
+// ========== LAYOUT - general styles ==========
+.header {
+  padding: 5.6rem 2.4rem;
+  margin: 0 auto;
+  position: fixed;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  @include for-desktop {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.section {
+  padding: 4rem 0;
+}
+.container {
+  max-width: 110rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+  @include for-desktop {
+    margin: 0 auto;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+// ========== TYPOGRAPHY ==========
+h1 {
+  color: var(--primary-dark-violet);
+  font-size: var(--h1-font-size);
+  line-height: 1.2;
+  @include for-phone {
+    font-size: 4.6rem;
+    text-align: center;
+  }
+  @include for-tablet {
+    font-size: 4.6rem;
+    text-align: left;
+  }
+  @include for-landscape {
+    font-size: 5.2rem;
+  }
+  @include for-desktop {
+    font-size: var(--h1-font-size);
+  }
+}
+h2 {
+  color: var(--primary-dark-violet);
+  font-size: var(--h2-font-size);
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  @include for-phone {
+    font-size: 3rem;
+  }
+}
+h3 {
+  color: var(--primary-dark-violet);
+  font-weight: 700;
+}
+h4 {
+  color: var(--white-color);
+  margin-bottom: 2rem;
+  cursor: pointer;
+}

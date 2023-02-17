@@ -1,0 +1,107 @@
+:root {
+  --pseudo-display: none;
+}
+
+.red-color::-webkit-input-placeholder {
+  color: var(--red-color);
+}
+
+.shorten {
+  &__form {
+    margin-top: -16rem;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../../resources/images/bg-shorten-mobile.svg");
+    background-color: var(--primary-dark-violet);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    padding: 3rem;
+    gap: 5rem;
+    position: relative;
+
+    &::before {
+      content: "Please add a link";
+      position: absolute;
+      bottom: 46%;
+      font-style: italic;
+      display: var(--pseudo-display);
+      color: var(--red-color);
+      opacity: 0.9;
+    }
+
+    @include for-landscape {
+      background-image: url("../../../resources/images/bg-shorten-desktop.svg");
+      background-position: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5rem 6rem;
+      margin-top: -12rem;
+      &::before {
+        bottom: 12%;
+      }
+    }
+  }
+
+  &__input {
+    height: 6rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 2rem;
+    padding: 2rem;
+    color: var(--grayish-violet);
+    // outline: none;
+
+    @include for-landscape {
+      flex: 2 0 auto;
+    }
+  }
+
+  // &__label {
+  //   margin: 1rem 0 2rem;
+  //   font-style: italic;
+  // }
+}
+
+.generated-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--white-color);
+  margin: 3rem 0;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  display: none;
+
+  @include for-landscape {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+
+  &__user-link {
+    border-bottom: 1px solid #f0f1f6;
+    padding-bottom: 1.5rem;
+    color: var(--primary-dark-violet);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    @include for-landscape {
+      border: none;
+      padding-bottom: 0;
+      flex: 2;
+    }
+  }
+  &__shorten-link {
+    color: var(--primary-cyan);
+  }
+
+  &__btn {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}

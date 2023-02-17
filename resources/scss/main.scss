@@ -1,0 +1,15 @@
+// Base folder
+@import "./base/globals";
+@import "./base/mixins";
+@import "./base/variables";
+
+// Components folder
+@import "./components/btns.scss";
+
+// Layout folder
+@import "./layout/cta";
+@import "./layout/footer";
+@import "./layout/hero";
+@import "./layout/navigation";
+@import "./layout/shorten";
+@import "./layout/statistics";

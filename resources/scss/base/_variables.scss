@@ -1,0 +1,34 @@
+:root {
+  --header-height: 10rem;
+  // -------- Colors --------
+  // Primary
+  --primary-cyan: hsl(180, 66%, 49%);
+  --primary-dark-violet: hsl(257, 27%, 26%);
+
+  // Secondary
+  --red-color: hsl(0, 87%, 67%);
+
+  // Neutral
+  --gray-color: hsl(0, 0%, 75%);
+  --grayish-violet: hsl(257, 7%, 63%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+  --white-color: hsl(0, 0%, 100%);
+
+  // -------- Font and typography: --------
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 6.4rem;
+  --h2-font-size: 3.2rem;
+  --h3-font-size: 1.8rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: 1.3rem
+
+  // -------- Font weight: --------
+  --font-medium: 500;
+  --font-bold: 700;
+
+  // -------- z-index: --------
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
