@@ -11,7 +11,7 @@
     margin-top: -16rem;
     display: flex;
     flex-direction: column;
-    background-image: url("../../resources/images/bg-shorten-mobile.svg");
+    background-image: url("../resources/images/bg-shorten-mobile.svg");
     background-color: var(--primary-dark-violet);
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@
     }
 
     @include for-landscape {
-      background-image: url("../../../resources/images/bg-shorten-desktop.svg");
+      background-image: url("../resources/images/bg-shorten-desktop.svg");
       background-position: center;
       flex-direction: row;
       justify-content: space-between;
